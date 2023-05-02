@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Education Website Template</title>
+
+	<!-- font Awesome CDN link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+	<!-- JQuery CDN link -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+		<!-- Internal Styling -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: rgb(35, 35, 85);
+		}
+
+		span {
+			font-size: .9rem;
+		}
+
+		h6 {
+			font-size: 1.1rem;
+			color: rgb(24, 24, 49);
+		}
+
+
+		/*------------- Navigation style start ------------*/
+		nav {
+			height: 70px;
+			position: fixed;
+			width: 100%;
+			background-color: #000000;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1vw 8vw;
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+			z-index: 1;
+		}
+
+		nav .logo {
+			margin-top: 5px;
+			background-color: #101c32;
+			width: 250px;
+			cursor: pointer;
+		}
+
+		nav .navigation {
+			display: flex;
+		}
+
+		#menu-btn {
+			width: 30px;
+			height: 30px;
+			display: none;
+		}
+
+		#menu-close {
+			display: none;
+		}
+
+		nav .navigation ul {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		nav .navigation ul li {
+			list-style: none;
+			margin-left: 30px;
+		}
+
+		nav .navigation ul li a {
+			text-decoration: none;
+			color: whitesmoke;
+			font-size: 16px;
+			font-weight: 500;
+			transition: 0.3s ease;
+		}
+
+		nav .navigation ul li a.active,
+		nav .navigation ul li a:hover {
+			color: #FDC93B;
+
+		}
+
+		/*------------- Navigation style end ------------*/
+
+
+
+		/*------------- Hero section styling start --------------*/
+		#home {
+			background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), 
+			url("https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+			width: 100%;
+			height: 100vh;
+			background-size: cover;
+			background-position: center center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding-top: 40px;
+		}
+
+		#home h2 {
+			color: #fff;
+			font-size: 2.4rem;
+			letter-spacing: 1px;
+		}
+
+		#home p {
+			padding-top: 10px;
+			width: 50%;
+			color: #fff;
+			font-size: 1.1rem;
+			line-height: 25px;
+		}
+
+		#home .btn {
+			margin-top: 30px;
+		}
+
+		#home a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 13px 35px;
+			background-color: #fff;
+			font-weight: 600;
+			border-radius: 5px;
+		}
+
+		#home a.blue {
+			color: #fff;
+			background: rgb(21, 21, 100);
+			transition: 0.3s ease;
+		}
+
+		#home a.blue:hover {
+			color: rgb(21, 21, 100);
+			background: #fff;
+		}
+
+		#home a.yellow {
+			color: #fff;
+			background: #fdc938;
+			transition: 0.3s ease;
+		}
+
+		#home a.yellow:hover {
+			color: rgb(21, 21, 100);
+			background: #fff;
+		}
+
+		/*------------- Hero section styling end --------------*/
+
+
+		/*------------- Features section styling start -------------*/
+		#features {
+			padding: 5vw 8vw 0 8vw;
+			text-align: center;
+		}
+
+		#features .fea-base {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			grid-gap: 1rem;
+			margin-top: 50px;
+		}
+
+		#features .fea-box {
+			background: #edf1f2;
+			text-align: start;
+			padding: 1.2rem;
+			border-radius: 6px;
+		}
+
+		#features .fea-box i {
+			font-size: 2.3rem;
+			color: rgb(44, 44, 80);
+		}
+
+		#features .fea-box h3 {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: rgb(46, 46, 59);
+			padding: 13px 0 7px 0;
+		}
+
+		#features .fea-box p {
+			font-size: 1rem;
+			font-weight: 400;
+			color: rgb(70, 70, 87);
+		}
+
+		/*------------- Features section styling end -------------*/
+
+
+		/*------------- Courses section styling start ------------*/
+		#course {
+			padding: 8vw 8vw 8vw 8vw;
+			text-align: center;
+			margin-bottom: 0px;
+		}
+
+		#course .course-box {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			grid-gap: 1rem;
+			margin-top: 50px;
+		}
+
+		#course .courses {
+			text-align: start;
+			background: #edf1f2;
+			height: 100%;
+			position: relative;
+		}
+
+		#course .courses img {
+			width: 100%;
+			height: 70%;
+			background-size: cover;
+			background-position: center;
+		}
+
+		#course .courses .details {
+			padding: 15px 15px 0 15px;
+		}
+
+		#course .courses .details i {
+			color: #fdc93b;
+			font-size: .9rem;
+		}
+
+		/*------------- Courses section styling end ------------*/
+
+
+
+
+
+
+		/*------------- Experts section styling starts ----------*/
+		#experts {
+			padding: 8vw 8vw 8vw 8vw;
+			text-align: center;
+		}
+
+		#experts .expert-box {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-gap: 1rem;
+			margin-top: 50px;
+		}
+
+		#experts .expert-box .profile {
+			background: #fafaf1;
+			padding: 30px 10px;
+			box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+		}
+
+		#experts .expert-box .profile:hover {
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+		}
+
+		.pro-links {
+			margin-top: 10px;
+		}
+
+		.pro-links i {
+			padding: 10px 13px;
+			border: 1px solid rgb(21, 21, 100);
+			cursor: pointer;
+			transition: 0.3s ease;
+		}
+
+		.pro-links i:hover {
+			background: rgb(21, 21, 100);
+			color: #fff;
+		}
+
+		/*------------- Experts section styling ends ----------*/
+
+
+
+		/*------------- Footer section styling starts ------------*/
+		footer {
+			padding: 8vw;
+			background-color: #101c32;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+
+		footer .footer-col {
+			padding-bottom: 40px;
+		}
+
+		footer h3 {
+			color: rgb(241, 240, 245);
+			font-weight: 600;
+			padding-bottom: 20px;
+		}
+
+		footer li {
+			list-style: none;
+			color: #7b838a;
+			padding: 10px 0;
+			font-size: 15px;
+			cursor: pointer;
+			transition: 0.3s ease;
+		}
+
+		footer li:hover {
+			color: rgb(241, 240, 245);
+		}
+
+		footer p {
+			color: #7b838a;
+		}
+
+		footer .subscribe {
+			margin-top: 20px;
+		}
+
+		footer input {
+			width: 220px;
+			padding: 15px 12px;
+			background: #334F6C;
+			border: none;
+			outline: none;
+			color: #fff;
+		}
+
+		footer .subscribe a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 12px 15px;
+			background-color: #fff;
+			font-weight: 600;
+		}
+
+		footer .subscribe a.yellow {
+			color: #fff;
+			background: #fdc93b;
+			transition: 0.3s ease;
+		}
+
+		footer .subscribe a.yellow:hover {
+			color: rgb(21, 21, 100);
+			background: #fff;
+		}
+
+		footer .copyright {
+			margin-top: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		footer .copyright p,
+		footer .copyright p>a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		footer .copyright .pro-links {
+			margin-top: 0px;
+		}
+
+		footer .copyright .pro-links i {
+			background-color: #5f7185;
+			color: #fff;
+		}
+
+		footer .copyright .pro-links i:hover {
+			background: #fdc93b;
+			color: #2c2c2c;
+		}
+
+		/*------------- Footer section styling ends ------------*/
+
+
+
+		/*---------------------------------------------------------*/
+		/*-------------------- Ipad screen styling ----------------*/
+		/*---------------------------------------------------------*/
+		@media screen and (max-width: 789px) {
+			nav {
+				padding: 15px 20px;
+			}
+
+			nav img {
+				width: 130px;
+			}
+
+			#menu-btn {
+				display: initial;
+			}
+
+			#menu-close {
+				display: initial;
+				font-size: 1.6rem;
+				color: #ffffff;
+				padding: 30px 0 20px 20px;
+			}
+
+			nav .navigation ul {
+				position: absolute;
+				top: 0;
+				right: -220px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				width: 220px;
+				height: 100vh;
+				background: rgba(17, 20, 104, 0.45);
+				backdrop-filter: blur(4.5px);
+				border: 1px solid rgba(255, 255, 255, 0.18);
+				transition: 0.3s ease-in;
+			}
+
+			nav .navigation ul.active {
+				right: 0;
+			}
+
+			nav .navigation ul li {
+				padding: 20px 0 20px 40px;
+				margin-left: 0;
+			}
+
+			nav .navigation ul li a {
+				color: #fff;
+			}
+
+			#home {
+				padding: 0px;
+			}
+
+			#home p {
+				width: 90%;
+			}
+
+			#features {
+				padding: 8vw 4vw 0 4vw;
+			}
+
+			#course {
+				padding: 8vw 4vw 8vw 4vw;
+			}
+
+			#registration {
+				padding: 6vw 4vw 6vw 4vw;
+				gap: 2.2rem;
+			}
+
+			#registration .reminder .time {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin-top: 40px;
+			}
+
+			#experts {
+				padding: 8vw 4vw 6vw 4vw;
+			}
+
+			footer .copyright .pro-links {
+				margin-top: 20px;
+			}
+		}
+
+
+		@media screen and (max-width: 475px) {
+			#registration {
+				flex-direction: column;
+			}
+
+			.reminder p,
+			.reminder h1 {
+				text-align: center;
+			}
+
+			.reminder h1 {
+				font-size: 1.8rem;
+			}
+
+			#registration .reminder .time {
+				justify-content: space-evenly;
+				margin-top: 20px;
+			}
+		}
+
+		/* Contact CSS */
+		#contact {
+			margin-top: 5px;
+			padding: 8vw;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+
+		#contact .getin {
+			width: 350px;
+		}
+
+		#contact .getin h2 {
+			color: #2c234d;
+			font-size: 30px;
+			font-weight: 800;
+			line-height: .8;
+			margin-bottom: 16px;
+		}
+
+		#contact .getin p {
+			color: #686875;
+			line-height: 24px;
+			margin-bottom: 33px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #e5e4ed;
+		}
+
+		#contact .getin h3 {
+			color: #2c234d;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 26px;
+			margin-bottom: 15px;
+		}
+
+		#contact .getin .getin-details div {
+			display: flex;
+		}
+
+		#contact .getin .getin-details div .get {
+			font-size: 16px;
+			line-height: 22px;
+			color: #5838fc;
+			margin-right: 20px;
+		}
+
+		#contact .getin .getin-details div p {
+			font-size: 14px;
+			border-bottom: none;
+			line-height: 22px;
+			margin-bottom: 15px;
+		}
+
+		#contact .getin .getin-details .pro-links i {
+			margin-right: 8px;
+		}
+
+		#contact .form {
+			width: 60%;
+			background: #f7f6fa;
+			padding: 40px;
+			border-radius: 10px;
+		}
+
+		#contact .form h4 {
+			font-size: 24px;
+			color: #2c234d;
+			line-height: 30px;
+			margin-bottom: 8px;
+		}
+
+		#contact .form p {
+			color: #686875;
+			line-height: 24px;
+			padding-bottom: 25px;
+		}
+
+		#contact .form .form-row {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		#contact .form .form-row input {
+			width: 48%;
+			font-size: 14px;
+			font-weight: 400;
+			border-radius: 3px;
+			border: none;
+			background: #fff;
+			color: #7e7c87;
+			outline: none;
+			padding: 20px 30px;
+			margin-bottom: 20px;
+		}
+
+		#contact .form .form-col input,
+		#contact .form .form-col textarea {
+			width: 100%;
+			font-size: 14px;
+			font-weight: 400;
+			border-radius: 3px;
+			border: none;
+			background: #fff;
+			color: #7e7c87;
+			outline: none;
+			padding: 20px 30px;
+			margin-bottom: 20px;
+		}
+
+
+		#contact .form button {
+			font-size: .9rem;
+			padding: 13px 25px;
+			background: rgb(21, 21, 100);
+			border-radius: 5px;
+			outline: none;
+			border: none;
+			font-weight: 600;
+			cursor: pointer;
+			color: #fff;
+		}
+
+		#map {
+			width: 100%;
+			height: 70vh;
+		}
+
+		#map iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+
+		/*-------------------------------------------------------*/
+		/*------------- Tablet screen styling -------------------*/
+		/*-------------------------------------------------------*/
+		@media screen and (max-width: 769px) {
+			#contact {
+				padding: 8vw 4vw;
+			}
+
+			#contact .getin {
+				width: 250px;
+			}
+		}
+
+
+		/*---------------------------------------------------------*/
+		/*-------------- Mobile screen styling -------------------*/
+		/*---------------------------------------------------------*/
+		@media screen and (max-width: 475px) {
+			#contact {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+
+			#contact .getin {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			#contact .form {
+				width: 100%;
+				padding: 40px 30px;
+			}
+
+			#contact .form .form-row {
+				flex-direction: column;
+			}
+
+			#contact .form .form-row input {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Navigation start -->
+	<nav>
+		<a href="#home">
+			<img src="https://sc.edu/_global_resources/img/usc_logo_horizontal_rgb_g_rev.svg" class="logo"
+				alt="University of California">
+		</a>
+
+		<div class="navigation">
+			<ul>
+				<i id="menu-close" class="fas fa-times"></i>
+				<li><a href="#home" class="active">Home</a></li>
+				<li><a href="#course">Courses</a></li>
+				<li><a href="#experts">Our Faculty</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+
+			<img src="https://icon-library.com/images/hamburger-menu-icon-png/hamburger-menu-icon-png-9.jpg"
+				id="menu-btn" alt="">
+		</div>
+	</nav>
+	<!-- Navigation ends -->
+
+
+	<!-- Hero section starts from here -->
+	<section id="home">
+		<h2>
+			Enhance Your Future With University of California
+		</h2>
+		<p>
+			Empowering tomorrow's leaders, today: Explore the limitless opportunities at University of California.
+		</p>
+		<div class="btn">
+			<a href="#" class="blue">Learn More</a>
+			<a href="#" class="yellow">Visit Courses</a>
+		</div>
+	</section>
+	<!-- Hero section ends from here -->
+
+
+	<!-- Features section starts from here -->
+	<section id="features">
+		<h1>Awesome Features</h1>
+		<p>Replenish man have thing gathering lights yielding shall you</p>
+
+		<div class="fea-base">
+			<div class="fea-box">
+				<i class="fas fa-graduation-cap"></i>
+				<h3>Scholorship Facility</h3>
+				<p>
+					One make creepeth, man bearing theira firmament won't great heaven
+				</p>
+			</div>
+
+			<div class="fea-box">
+				<i class="fa-solid fa-book-bookmark"></i>
+				<h3>Various Online Courses</h3>
+				<p>
+					One make creepeth, man bearing theira firmament won't great heaven
+				</p>
+			</div>
+
+			<div class="fea-box">
+				<i class="fas fa-award"></i>
+				<h3>Global Certification</h3>
+				<p>
+					One make creepeth, man bearing theira firmament won't great heaven
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- Features section ends from here -->
+
+
+	<!-- Courses section starts from here -->
+	<section id="course">
+		<h1>Departments</h1>
+		<p>Replenish man have thing gathering lights yielding shall you</p>
+
+		<div class="course-box">
+			<div class="courses">
+				<img src="https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Computer Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Electronics Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://plus.unsplash.com/premium_photo-1664299163694-6e42c062f768?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Mechanical Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://plus.unsplash.com/premium_photo-1661962472213-f99a6e7c1a60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Civil Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://images.unsplash.com/photo-1646073980877-10d8abcc8605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Aerospace Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://images.unsplash.com/photo-1561377916-e87f02d85b43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1140&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Marine Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="courses">
+				<img src="https://plus.unsplash.com/premium_photo-1661947985585-639eca92d5db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+					alt="">
+				<div class="details">
+					<span>Pattern-2019</span>
+					<h6>Chemical Engineering</h6>
+
+					<div class="star">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+
+						<span>(239)</span>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+	<!-- Courses section ends from here -->
+
+
+
+	<!-- Experts section starts from here -->
+	<section id="experts">
+		<h1>Passionate Faculty</h1>
+		<p>" Guiding minds, shaping futures: Meet the knowledgeable faculty of our University "</p>
+		<div class="expert-box">
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=177&q=80" alt="">
+				<h6>Ema Ernik</h6>
+				<p>H.O.D <br> (Computer Engineering)</p>
+				<div class="pro-links">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin-in"></i>
+				</div>
+			</div>
+
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=177&q=60" alt="">
+				<h6>Jason chua</h6>
+				<p>H.O.D <br> (Civil Engineering)</p>
+				<div class="pro-links">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin-in"></i>
+				</div>
+			</div>
+
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=177&q=80" alt="">
+				<h6>Maalik Halper</h6>
+				<p>H.O.D <br> (Electronics Engineering)</p>
+				<div class="pro-links">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin-in"></i>
+				</div>
+			</div>
+
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80" alt="">
+				<h6>Jennifer Lopez</h6>
+				<p>H.O.D <br>(Mechanical Engineering)</p>
+				<div class="pro-links">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin-in"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+
+	<section id="contact">
+		<div class="getin">
+			<h2>Get in touch</h2>
+			<p>Looking for help? Fill the form and start a new adventure.</p>
+
+			<div class="getin-details">
+				<h3>Headquaters</h3>
+				<div>
+					<i class="fa-solid fa-map get"></i>
+					<p>744 New York Ave, Brooklyn, kings, New York 10224</p>
+				</div>
+
+				<h3>Phone</h3>
+				<div>
+					<i class="fas fa-phone-alt get"></i>
+					<p>(+91) 98671 23456 <br> (+91) 98671 23456</p>
+				</div>
+
+				<h3>Support</h3>
+				<div>
+					<i class="fa-solid fa-envelope get"></i>
+					<p>tech@educa.com <br> info@educa.com </p>
+				</div>
+
+				<h3>Follow Us</h3>
+				<div class="pro-links">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-linkedin-in"></i>
+					<i class="fab fa-behance"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="form">
+			<h4>Let's Connect</h4>
+			<p>Lorem ipsum, dolor sit amet consectetur.</p>
+			<div class="form-row">
+				<input type="text" placeholder="Your Name">
+				<input type="email" placeholder="Your Email">
+			</div>
+			<div class="form-col">
+				<input type="text" placeholder="Subject line...">
+			</div>
+			<div class="form-col">
+				<textarea name="" id="" cols="30" rows="8" placeholder="How can we help?"></textarea>
+			</div>
+
+			<div class="form-col">
+				<button>Send Message</button>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="map">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.5783527621743!2d-122.26203552363391!3d37.8701552066593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7718c522d7c1%3A0xda8034ea3b6b3289!2sUniversity%20of%20California%2C%20Berkeley!5e0!3m2!1sen!2sin!4v1683018994662!5m2!1sen!2sin"
+			width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</section>
+
+
+
+
+
+
+
+
+	<!-- Experts section ends from here -->
+
+	<!-- Footer section starts from here -->
+	<footer>
+		<div class="footer-col">
+			<h3>Top Products</h3>
+			<li>Manage Reputation</li>
+			<li>Power Tools</li>
+			<li>Managed Website</li>
+			<li>Marketing Service</li>
+		</div>
+
+		<div class="footer-col">
+			<h3>Power Tools</h3>
+			<li>Jobs</li>
+			<li>Marketing Service</li>
+			<li>Top Products</li>
+			<li>Manage Reputation</li>
+		</div>
+
+		<div class="footer-col">
+			<h3>Power Tools</h3>
+			<li>Managed Website</li>
+			<li>Manage Reputation</li>
+			<li>Top Products</li>
+			<li>Marketing Service</li>
+		</div>
+
+		<div class="footer-col">
+			<h3>Guides</h3>
+			<li>Research</li>
+			<li>Experts</li>
+			<li>Managed Website</li>
+			<li>Marketing Service</li>
+		</div>
+
+		<div class="footer-col">
+			<h3>Newsletter</h3>
+			<p>You can trust us. we only send promo offers.</p>
+
+			<div class="subscribe">
+				<input type="email" placeholder="Your email Address">
+				<a href="#" class="yellow">SUBSCRIBE</a>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<p>
+				Copyright @ 2023 All rights reserved | This website is made by <a href="https://atulcodex.com"
+					target="_blank">Pranav Shinde </a>
+			</p>
+			<div class="pro-links">
+				<i class="fab fa-facebook"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-linkedin-in"></i>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section ends from here -->
+
+	<script>
+		// Show menu links on burger click
+		$('#menu-btn').click(function () {
+			$('nav .navigation ul').addClass('active')
+		});
+
+		// Hide navbar on click function
+		$('#menu-close').click(function () {
+			$('nav .navigation ul').removeClass('active')
+		});
+	</script>
+</body>
+
+</html>
